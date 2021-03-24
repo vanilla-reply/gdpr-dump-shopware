@@ -1,0 +1,160 @@
+---
+database:
+    user:     '%env(DB_USERNAME)%'
+    password: '%env(DB_PASSWORD)%'
+    name:     '%env(DB_NAME)%'
+    host:     '%env(DB_HOST)%'
+    port:     '%env(DB_PORT)%'
+
+dump:
+    output: 'shopware6-{Y-m-d_H:i:s}.sql.gz'
+    compress: 'gzip'
+
+tables:
+    customer:
+        converters:
+            first_name:
+                converter: 'randomizeText'
+            last_name:
+                converter: 'randomizeText'
+            company:
+                converter: 'randomizeText'
+            password:
+                converter: 'setValue'
+                parameters:
+                    value: 'randomized'
+            legacy_password:
+                converter: 'setValue'
+                parameters:
+                    value: 'randomized'
+            email:
+                converter: 'randomizeEmail'
+            title:
+                converter: 'randomizeText'
+            birthday:
+                converter: 'randomDate'
+            remote_address:
+                converter: 'setValue'
+                parameters:
+                    value: '127.0.0.1'
+    customer_address:
+        converters:
+            company:
+                converter: 'randomizeText'
+            department:
+                converter: 'randomizeText'
+            title:
+                converter: 'randomizeText'
+            first_name:
+                converter: 'randomizeText'
+            last_name:
+                converter: 'randomizeText'
+            street:
+                converter: 'randomizeText'
+            zipcode:
+                converter: 'randomizeNumber'
+            city:
+                converter: 'randomizeText'
+            vat_id:
+                converter: 'randomizeNumber'
+            phone_number:
+                converter: 'randomizeNumber'
+            additional_address_line1:
+                converter: 'randomizeText'
+            additional_address_line2:
+                converter: 'randomizeText'
+
+    cart:
+        truncate: true
+    customer_recovery:
+        truncate: true
+    dead_recovery:
+        truncate: true
+    enqueue:
+        truncate: true
+    google_shopping_account:
+        truncate: true
+    google_shopping_merchant_account:
+        truncate: true
+    integration:
+        truncate: true
+    log_entry:
+        truncate: true
+    message_queue_stats:
+        truncate: true
+    newsletter_recipient:
+        converters:
+            email:
+                converter: 'randomizeEmail'
+            title:
+                converter: 'randomizeText'
+            first_name:
+                converter: 'randomizeText'
+            last_name:
+                converter: 'randomizeText'
+            zip_code:
+                converter: 'randomizeNumber'
+            city:
+                converter: 'randomizeText'
+            street:
+                converter: 'randomizeText'
+    order_address:
+        converters:
+            company:
+                converter: 'randomizeText'
+            department:
+                converter: 'randomizeText'
+            title:
+                converter: 'randomizeText'
+            first_name:
+                converter: 'randomizeText'
+            last_name:
+                converter: 'randomizeText'
+            street:
+                converter: 'randomizeText'
+            zipcode:
+                converter: 'randomizeNumber'
+            city:
+                converter: 'randomizeText'
+            vat_id:
+                converter: 'randomizeNumber'
+            phone_number:
+                converter: 'randomizeNumber'
+            additional_address_line1:
+                converter: 'randomizeText'
+            additional_address_line2:
+                converter: 'randomizeText'
+    order_customer:
+        converters:
+            email:
+                converter: 'randomizeEmail'
+            first_name:
+                converter: 'randomizeText'
+            last_name:
+                converter: 'randomizeText'
+            title:
+                converter: 'randomizeText'
+            company:
+                converter: 'randomizeText'
+            remote_address:
+                converter: 'setValue'
+                parameters:
+                    value: '127.0.0.1'
+    product_review:
+        converters:
+            external_user:
+                converter: 'randomizeText'
+            external_email:
+                converter: 'randomizeEmail'
+    refresh_token:
+        truncate: true
+    scheduled_task:
+        truncate: true
+    user_recovery:
+        truncate: true
+    version:
+        truncate: true
+    version_commit:
+        truncate: true
+    version_commit_data:
+        truncate: true

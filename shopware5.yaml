@@ -1,0 +1,145 @@
+---
+database:
+    user:     '%env(DB_USERNAME)%'
+    password: '%env(DB_PASSWORD)%'
+    name:     '%env(DB_NAME)%'
+    host:     '%env(DB_HOST)%'
+    port:     '%env(DB_PORT)%'
+
+dump:
+    output: 'shopware5-{Y-m-d_H:i:s}.sql.gz'
+    compress: 'gzip'
+
+tables:
+    bestit_amazon_access_token:
+        truncate: true
+    bestit_amazon_alexa_customer_sale_notification:
+        truncate: true
+    bestit_amazon_alexa_notifications:
+        truncate: true
+    bestit_amazon_alexa_oauth_access_token:
+        truncate: true
+    bestit_amazon_alexa_oauth_access_token_scope:
+        truncate: true
+    bestit_amazon_alexa_oauth_auth_code:
+        truncate: true
+    bestit_amazon_alexa_oauth_auth_code_scope:
+        truncate: true
+    bestit_amazon_alexa_oauth_client:
+        truncate: true
+    bestit_amazon_alexa_oauth_refresh_token:
+        truncate: true
+    bestit_amazon_alexa_oauth_scope:
+        truncate: true
+    bestit_amazon_alexa_sale_notification:
+        truncate: true
+    bestit_amazon_alexa_skill:
+        truncate: true
+    bestit_amazon_alexa_skill_manifest:
+        truncate: true
+    bestit_amazon_cache:
+        truncate: true
+    customer_migration:
+        truncate: true
+    import_kundengutscheine_tmp:
+        truncate: true
+    import_voucher_codes_redeemed:
+        truncate: true
+    migration_order:
+        truncate: true
+    migration_order_detail:
+        truncate: true
+    payenginecw_customer_context:
+        truncate: true
+    payenginecw_storage:
+        truncate: true
+    payenginecw_transaction:
+        truncate: true
+    s_core_payment_data:
+        truncate: true
+    s_core_payment_instance:
+        truncate: true
+    s_core_sessions:
+        truncate: true
+    s_core_sessions_backend:
+        truncate: true
+    s_customer_search_index:
+        truncate: true
+    s_customer_streams_mapping:
+        truncate: true
+    s_es_backlog:
+        truncate: true
+    s_order:
+        truncate: true
+    s_orders_order_attributes:
+        truncate: true
+    s_order_basket:
+        truncate: true
+    s_order_basket_attributes:
+        truncate: true
+    s_order_basket_saved:
+        truncate: true
+    s_order_basket_saved_items:
+        truncate: true
+    s_order_basket_signatures:
+        truncate: true
+    s_order_billingaddress:
+        truncate: true
+    s_order_billingaddress_attributes:
+        truncate: true
+    s_order_comparisons:
+        truncate: true
+    s_order_details:
+        truncate: true
+    s_order_details_attributes:
+        truncate: true
+    s_order_documents:
+        truncate: true
+    s_order_documents_attributes:
+        truncate: true
+    s_order_esd:
+        truncate: true
+    s_order_history:
+        truncate: true
+    s_order_notes:
+        truncate: true
+    s_order_shippingaddress:
+        truncate: true
+    s_order_shippingaddress_attributes:
+        truncate: true
+    s_plugin_reply_consentric_send_user_data_job:
+        truncate: true
+    s_statistics_article_impression:
+        truncate: true
+    s_statistics_currentusers:
+        truncate: true
+    s_statistics_pool:
+        truncate: true
+    s_statistics_referer:
+        truncate: true
+    s_statistics_search:
+        truncate: true
+    s_statistics_visitors:
+        truncate: true
+    s_user:
+        truncate: true
+    s_user_addresses:
+        truncate: true
+    s_user_addresses_attributes:
+        truncate: true
+    s_user_attributes:
+        truncate: true
+    s_user_billingaddress:
+        truncate: true
+    s_user_billingaddress_attributes:
+        truncate: true
+    s_user_shippingaddress:
+        truncate: true
+    s_user_shippingaddress_attributes:
+        truncate: true
+    s_articles_also_bought_ro:
+        truncate: true
+    s_articles_categories_ro:
+        truncate: true
+    s_articles_top_seller_ro:
+        truncate: true
