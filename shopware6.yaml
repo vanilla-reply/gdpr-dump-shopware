@@ -1,10 +1,10 @@
 ---
 database:
-    user:     '%env(DB_USERNAME)%'
-    password: '%env(DB_PASSWORD)%'
-    name:     '%env(DB_NAME)%'
-    host:     '%env(DB_HOST)%'
-    port:     '%env(DB_PORT)%'
+    user:     '%env(MYSQL_USER)%'
+    password: '%env(MYSQL_PASSWORD)%'
+    name:     '%env(MYSQL_DATABASE)%'
+    host:     '%env(MYSQL_HOST)%'
+    port:     '%env(MYSQL_PORT)%'
 
 dump:
     output: 'shopware6-{Y-m-d_H:i:s}.sql.gz'
